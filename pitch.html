@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-TW">
 <head>
 <meta charset="UTF-8">
@@ -8,20 +8,20 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --bg:#0a0e1a;--surface:#111827;--surface2:#1a2235;--accent:#3b82f6;--accent2:#8b5cf6;
-  --green:#10b981;--red:#ef4444;--yellow:#f59e0b;--text:#e2e8f0;--muted:#94a3b8;
+  --bg:#0a0e1a;--surface:#111827;--surface2:#1a2235;--accent:#67e8f9;--accent2:#ddd6fe;
+  --green:#bbf7d0;--red:#fca5a5;--yellow:#fef08a;--text:#f8fafc;--muted:#fde68a;
   --border:#1e293b;
 }
-body{background:var(--bg);color:var(--text);font-family:"Noto Sans TC",sans-serif;overflow-x:hidden}
+body{background:var(--bg);color:var(--text);font-family:"Noto Sans TC",sans-serif;overflow-x:hidden;font-size:19px;line-height:1.7}
 .nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,14,26,0.95);
   backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:0 2rem;
   display:flex;align-items:center;justify-content:space-between;height:60px}
 .nav-logo{display:flex;align-items:center;gap:0.6rem;text-decoration:none}
-.nav-logo-text{font-size:1.1rem;font-weight:700;color:#ffffff;letter-spacing:0.01em}
-.nav-user{display:flex;align-items:center;gap:0.5rem;background:rgba(59,130,246,0.12);border:1px solid rgba(59,130,246,0.25);border-radius:20px;padding:0.3rem 0.8rem;font-size:0.82rem;color:var(--accent);font-weight:600}
+.nav-logo-text{font-size:1.85rem;font-weight:700;color:#ffffff;letter-spacing:0.01em}
+.nav-user{display:flex;align-items:center;gap:0.5rem;background:rgba(59,130,246,0.12);border:1px solid rgba(59,130,246,0.25);border-radius:20px;padding:0.3rem 0.8rem;font-size:1.05rem;color:var(--accent);font-weight:600}
 .nav-tabs{display:flex;gap:0.5rem}
 .nav-tab{padding:0.4rem 1rem;border:none;background:transparent;color:var(--muted);
-  cursor:pointer;border-radius:6px;font-size:0.85rem;font-family:"Noto Sans TC",sans-serif;
+  cursor:pointer;border-radius:6px;font-size:1.08rem;font-family:"Noto Sans TC",sans-serif;
   transition:all 0.2s}
 .nav-tab:hover{color:var(--text);background:var(--surface2)}
 .nav-tab.active{color:var(--accent);background:rgba(59,130,246,0.1)}
@@ -33,35 +33,35 @@ body{background:var(--bg);color:var(--text);font-family:"Noto Sans TC",sans-seri
 .hero::before{content:"";position:absolute;top:-50%;left:-50%;width:200%;height:200%;
   background:radial-gradient(ellipse at center,rgba(59,130,246,0.08) 0%,transparent 60%)}
 .hero-badge{display:inline-block;background:rgba(59,130,246,0.15);border:1px solid rgba(59,130,246,0.3);
-  color:var(--accent);padding:0.3rem 1rem;border-radius:20px;font-size:0.8rem;margin-bottom:1.5rem}
-.hero h1{font-size:clamp(1.8rem,4vw,3rem);font-weight:900;line-height:1.2;margin-bottom:1rem}
+  color:var(--accent);padding:0.3rem 1rem;border-radius:20px;font-size:1.05rem;margin-bottom:1.5rem}
+.hero h1{font-size:clamp(2.6rem,5vw,4.2rem);font-weight:900;line-height:1.2;margin-bottom:1rem}
 .hero h1 span{background:linear-gradient(135deg,var(--accent),var(--accent2));
   -webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.hero-sub{color:var(--muted);font-size:1rem;max-width:600px;margin:0 auto 2rem}
+.hero-sub{color:var(--muted);font-size:1.22rem;max-width:600px;margin:0 auto 2rem}
 .hero-stats{display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;margin-top:2rem}
 .hero-stat{text-align:center}
-.hero-stat-num{font-size:2rem;font-weight:900;color:var(--accent)}
-.hero-stat-label{font-size:0.75rem;color:var(--muted);margin-top:0.2rem}
+.hero-stat-num{font-size:2.45rem;font-weight:900;color:var(--accent)}
+.hero-stat-label{font-size:1.22rem;color:var(--muted);margin-top:0.2rem}
 /* Containers */
 .container{max-width:1200px;margin:0 auto;padding:2rem}
-.section-title{font-size:1.5rem;font-weight:700;margin-bottom:1.5rem;display:flex;align-items:center;gap:0.5rem}
+.section-title{font-size:1.85rem;font-weight:700;margin-bottom:1.5rem;display:flex;align-items:center;gap:0.5rem}
 .section-title::before{content:"";width:4px;height:1.5rem;background:linear-gradient(var(--accent),var(--accent2));border-radius:2px}
 /* Cards */
 .card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.5rem;margin-bottom:1rem}
-.card-title{font-size:0.9rem;font-weight:600;color:var(--muted);margin-bottom:0.75rem;text-transform:uppercase;letter-spacing:0.05em}
+.card-title{font-size:1.15rem;font-weight:600;color:var(--muted);margin-bottom:0.75rem;text-transform:uppercase;letter-spacing:0.05em}
 /* Grid */
 .grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1rem}
 .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem}
 /* Progress bars */
 .bar-wrap{margin-bottom:0.75rem}
-.bar-label{display:flex;justify-content:space-between;margin-bottom:0.3rem;font-size:0.85rem}
+.bar-label{display:flex;justify-content:space-between;margin-bottom:0.3rem;font-size:1.08rem}
 .bar-bg{background:var(--border);border-radius:4px;height:8px;overflow:hidden}
 .bar-fill{height:100%;border-radius:4px;transition:width 1s ease}
 .bar-kmt{background:linear-gradient(90deg,#1e40af,#3b82f6)}
 .bar-dpp{background:linear-gradient(90deg,#166534,#22c55e)}
 .bar-other{background:linear-gradient(90deg,#92400e,#f59e0b)}
 /* Tags */
-.tag{display:inline-block;padding:0.2rem 0.6rem;border-radius:4px;font-size:0.75rem;margin:0.2rem}
+.tag{display:inline-block;padding:0.2rem 0.6rem;border-radius:4px;font-size:1.22rem;margin:0.2rem}
 .tag-blue{background:rgba(59,130,246,0.15);color:#93c5fd;border:1px solid rgba(59,130,246,0.2)}
 .tag-green{background:rgba(16,185,129,0.15);color:#6ee7b7;border:1px solid rgba(16,185,129,0.2)}
 .tag-purple{background:rgba(139,92,246,0.15);color:#c4b5fd;border:1px solid rgba(139,92,246,0.2)}
@@ -74,30 +74,44 @@ body{background:var(--bg);color:var(--text);font-family:"Noto Sans TC",sans-seri
   background:linear-gradient(90deg,var(--accent),var(--accent2))}
 .feature-card:hover{border-color:var(--accent);transform:translateY(-2px);
   box-shadow:0 8px 30px rgba(59,130,246,0.15)}
-.feature-icon{font-size:2rem;margin-bottom:0.75rem}
-.feature-title{font-size:1rem;font-weight:700;margin-bottom:0.5rem}
-.feature-desc{font-size:0.85rem;color:var(--muted);line-height:1.6}
+.feature-icon{display:none}
+.feature-title{font-size:1.22rem;font-weight:700;margin-bottom:0.5rem}
+.feature-desc{font-size:1.08rem;color:var(--muted);line-height:1.6}
 /* Candidate cards */
 .candidate-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:2rem;
   transition:all 0.3s;position:relative;overflow:hidden}
 .candidate-card.selected{border-color:var(--accent);box-shadow:0 0 30px rgba(59,130,246,0.2)}
-.candidate-card.selected::after{content:"✓ 目標人選";position:absolute;top:1rem;right:1rem;
-  background:var(--accent);color:white;padding:0.2rem 0.6rem;border-radius:4px;font-size:0.75rem;font-weight:700}
-.candidate-name{font-size:1.5rem;font-weight:900;margin-bottom:0.25rem}
-.candidate-sub{color:var(--muted);font-size:0.9rem;margin-bottom:1rem}
+.candidate-card.selected::after{content:" 目標人選";position:absolute;top:1rem;right:1rem;
+  background:var(--accent);color:white;padding:0.2rem 0.6rem;border-radius:4px;font-size:1.22rem;font-weight:700}
+.candidate-name{font-size:1.85rem;font-weight:900;margin-bottom:0.25rem}
+.candidate-sub{color:var(--muted);font-size:1.15rem;margin-bottom:1rem}
 .poll-bar{background:var(--border);border-radius:8px;height:12px;margin:0.5rem 0}
 .poll-fill{height:100%;border-radius:8px;background:linear-gradient(90deg,var(--accent),var(--accent2))}
 /* Issue cards */
 .issue-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.5rem;
   border-left:4px solid var(--accent);margin-bottom:1rem;transition:all 0.3s}
 .issue-card:hover{background:var(--surface2);transform:translateX(4px)}
-.issue-title{font-size:1rem;font-weight:700;margin-bottom:0.5rem;display:flex;align-items:center;gap:0.5rem}
-.issue-body{font-size:0.85rem;color:var(--muted);line-height:1.7}
+.issue-title{font-size:1.22rem;font-weight:700;margin-bottom:0.5rem;display:flex;align-items:center;gap:0.5rem}
+.issue-body{font-size:1.08rem;color:var(--muted);line-height:1.7}
+.issue-card.presentation{background:#162033;border:1px solid rgba(125,211,252,0.18);border-left-width:6px;border-radius:16px;padding:2rem;margin-bottom:1.4rem;cursor:pointer;box-shadow:0 10px 30px rgba(2,6,23,0.18)}
+.issue-card.presentation:hover{background:#1b2940;transform:translateX(4px)}
+.issue-card.presentation .issue-title{font-size:1.55rem;margin-bottom:1.1rem;flex-wrap:wrap;gap:0.75rem 1rem}
+.issue-card.presentation .issue-body{font-size:1.22rem;color:var(--text);margin-bottom:1.4rem;line-height:1.8}
+.issue-card.presentation .system-match{background:#1d2b46;border:1px solid rgba(125,211,252,0.18);border-radius:12px;padding:1.4rem;margin-top:0}
+.issue-card.presentation .system-match-title{font-size:1.35rem;color:var(--accent);margin-bottom:1rem}
+.issue-detail-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0.85rem;margin-top:1rem}
+.issue-detail-cell{border-radius:10px;padding:1rem 1.1rem;font-size:1.08rem;line-height:1.75;color:var(--text)}
+.issue-detail-cell strong{display:block;margin-bottom:0.25rem;font-size:1.15rem}
+.issue-detail-blue{background:rgba(59,130,246,0.16)}
+.issue-detail-yellow{background:rgba(245,158,11,0.16)}
+.issue-detail-purple{background:rgba(139,92,246,0.16)}
+.issue-detail-green{background:rgba(16,185,129,0.16)}
+@media (max-width:760px){.issue-detail-grid{grid-template-columns:1fr}.issue-card.presentation{padding:1.4rem}.issue-card.presentation .issue-title{font-size:1.3rem}}
 /* System match */
 .system-match{background:rgba(59,130,246,0.08);border:1px solid rgba(59,130,246,0.2);
   border-radius:8px;padding:1rem;margin-top:1rem}
-.system-match-title{font-size:0.8rem;color:var(--accent);font-weight:600;margin-bottom:0.5rem}
-.system-match ul{list-style:none;font-size:0.85rem;color:var(--text)}
+.system-match-title{font-size:1.05rem;color:var(--accent);font-weight:600;margin-bottom:0.5rem}
+.system-match ul{list-style:none;font-size:1.08rem;color:var(--text)}
 .system-match ul li::before{content:"→ ";color:var(--accent)}
 /* Timeline */
 .timeline{position:relative;padding-left:2rem}
@@ -106,8 +120,8 @@ body{background:var(--bg);color:var(--text);font-family:"Noto Sans TC",sans-seri
 .timeline-item{position:relative;margin-bottom:1.5rem}
 .timeline-dot{position:absolute;left:-1.65rem;top:0.2rem;width:12px;height:12px;
   border-radius:50%;background:var(--accent);border:2px solid var(--bg)}
-.timeline-year{font-size:0.75rem;color:var(--accent);font-weight:600;margin-bottom:0.2rem}
-.timeline-text{font-size:0.9rem;color:var(--text)}
+.timeline-year{font-size:1.22rem;color:var(--accent);font-weight:600;margin-bottom:0.2rem}
+.timeline-text{font-size:1.15rem;color:var(--text)}
 /* SWOT */
 .swot-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
 .swot-item{padding:1.2rem;border-radius:10px}
@@ -115,20 +129,28 @@ body{background:var(--bg);color:var(--text);font-family:"Noto Sans TC",sans-seri
 .swot-w{background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.2)}
 .swot-o{background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.2)}
 .swot-t{background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.2)}
-.swot-label{font-size:0.75rem;font-weight:700;text-transform:uppercase;margin-bottom:0.5rem}
+.swot-label{font-size:1.22rem;font-weight:700;text-transform:uppercase;margin-bottom:0.5rem}
 .swot-s .swot-label{color:var(--green)}
 .swot-w .swot-label{color:var(--red)}
 .swot-o .swot-label{color:var(--accent)}
 .swot-t .swot-label{color:var(--yellow)}
-.swot-list{list-style:none;font-size:0.82rem;color:var(--muted);line-height:1.8}
+.swot-list{list-style:none;font-size:1.05rem;color:var(--muted);line-height:1.8}
 /* Conclusion */
 .conclusion-box{background:linear-gradient(135deg,rgba(59,130,246,0.1),rgba(139,92,246,0.1));
   border:1px solid rgba(59,130,246,0.3);border-radius:16px;padding:2rem;text-align:center}
-.conclusion-box h2{font-size:1.5rem;font-weight:900;margin-bottom:1rem}
+.conclusion-box h2{font-size:1.85rem;font-weight:900;margin-bottom:1rem}
 .conclusion-steps{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:1.5rem}
 .step-box{background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.2);
-  border-radius:10px;padding:1rem;min-width:150px;font-size:0.85rem}
-.step-num{font-size:1.5rem;font-weight:900;color:var(--accent);margin-bottom:0.3rem}
+  border-radius:10px;padding:1rem;min-width:150px;font-size:1.08rem}
+.step-num{font-size:1.85rem;font-weight:900;color:var(--accent);margin-bottom:0.3rem}
+.nav-tab{color:#c7d2fe}
+.nav-user{color:#fef08a}
+.hero-sub,.hero-stat-label,.candidate-sub,.issue-body,.swot-list{color:#fde68a}
+.card-title,.system-match-title,.timeline-year{color:#67e8f9}
+.feature-desc,.timeline-text{color:#e0f2fe}
+.step-box{color:#f8fafc}
+.candidate-photo{width:72px;height:72px;border-radius:50%;object-fit:cover;border:2px solid rgba(103,232,249,0.65);box-shadow:0 0 0 4px rgba(103,232,249,0.12);background:linear-gradient(135deg,#1e3a5f,#3b82f6)}
+.candidate-photo.ma{border-color:rgba(221,214,254,0.75);box-shadow:0 0 0 4px rgba(221,214,254,0.14)}
 </style>
 </head>
 <body>
@@ -155,13 +177,13 @@ body{background:var(--bg);color:var(--text);font-family:"Noto Sans TC",sans-seri
     <button class="nav-tab" onclick="showPage('issues')">關鍵議題</button>
     <button class="nav-tab" onclick="showPage('strategy')">作戰策略</button>
   </div>
-  <div class="nav-user">👤 Anne</div>
+  <div class="nav-user"> Anne</div>
 </nav>
 
 <!-- PAGE 1: OVERVIEW -->
 <div class="page active" id="page-overview">
   <div class="hero">
-    <div class="hero-badge">🎯 Frontier Lab 商務提案 · 2026 臺北市議員選舉</div>
+    <div class="hero-badge"> Frontier Lab 商務提案 · 2026 臺北市議員選舉</div>
     <h1>臺北市第五選區<br><span>中正／萬華</span> 選戰分析</h1>
     <p class="hero-sub">以 AI 驅動的智慧選戰系統，精準部署 2026 年議員選舉</p>
     <div class="hero-stats">
@@ -175,42 +197,36 @@ body{background:var(--bg);color:var(--text);font-family:"Noto Sans TC",sans-seri
     <div class="section-title">Frontier Lab 系統功能架構</div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:2rem">
       <div class="card" style="border-top:3px solid var(--accent)">
-        <div class="card-title">🏢 日常選區營運模式</div>
+        <div class="card-title"> 日常選區營運模式</div>
         <div class="grid-3" style="gap:0.75rem">
           <div class="feature-card" style="padding:1rem">
-            <div class="feature-icon">💬</div>
-            <div class="feature-title" style="font-size:0.9rem">智能對話</div>
-            <div class="feature-desc" style="font-size:0.8rem">AI 形象塑造<br>選民互動回應</div>
+            <div class="feature-title" style="font-size:1.15rem">智能對話</div>
+            <div class="feature-desc" style="font-size:1.05rem">AI 形象塑造<br>選民互動回應</div>
           </div>
           <div class="feature-card" style="padding:1rem">
-            <div class="feature-icon">📋</div>
-            <div class="feature-title" style="font-size:0.9rem">案件管理</div>
-            <div class="feature-desc" style="font-size:0.8rem">選民陳情追蹤<br>議題進度管理</div>
+            <div class="feature-title" style="font-size:1.15rem">案件管理</div>
+            <div class="feature-desc" style="font-size:1.05rem">選民陳情追蹤<br>議題進度管理</div>
           </div>
           <div class="feature-card" style="padding:1rem">
-            <div class="feature-icon">👥</div>
-            <div class="feature-title" style="font-size:0.9rem">選民資料庫</div>
-            <div class="feature-desc" style="font-size:0.8rem">關鍵人物識別<br>族群分層管理</div>
+            <div class="feature-title" style="font-size:1.15rem">選民資料庫</div>
+            <div class="feature-desc" style="font-size:1.05rem">關鍵人物識別<br>族群分層管理</div>
           </div>
         </div>
       </div>
       <div class="card" style="border-top:3px solid var(--accent2)">
-        <div class="card-title">🚀 選戰衝刺部署模式</div>
+        <div class="card-title"> 選戰衝刺部署模式</div>
         <div class="grid-3" style="gap:0.75rem">
           <div class="feature-card" style="padding:1rem">
-            <div class="feature-icon">📊</div>
-            <div class="feature-title" style="font-size:0.9rem">分區戰情</div>
-            <div class="feature-desc" style="font-size:0.8rem">即時選情監控<br>對手動態分析</div>
+            <div class="feature-title" style="font-size:1.15rem">分區戰情</div>
+            <div class="feature-desc" style="font-size:1.05rem">即時選情監控<br>對手動態分析</div>
           </div>
           <div class="feature-card" style="padding:1rem">
-            <div class="feature-icon">🗺️</div>
-            <div class="feature-title" style="font-size:0.9rem">選舉地圖</div>
-            <div class="feature-desc" style="font-size:0.8rem">票倉視覺化<br>地理分布分析</div>
+            <div class="feature-title" style="font-size:1.15rem">選舉地圖</div>
+            <div class="feature-desc" style="font-size:1.05rem">票倉視覺化<br>地理分布分析</div>
           </div>
           <div class="feature-card" style="padding:1rem">
-            <div class="feature-icon">📍</div>
-            <div class="feature-title" style="font-size:0.9rem">路線規劃</div>
-            <div class="feature-desc" style="font-size:0.8rem">掃街動線優化<br>活動場地建議</div>
+            <div class="feature-title" style="font-size:1.15rem">路線規劃</div>
+            <div class="feature-desc" style="font-size:1.05rem">掃街動線優化<br>活動場地建議</div>
           </div>
         </div>
       </div>
@@ -220,17 +236,16 @@ body{background:var(--bg);color:var(--text);font-family:"Noto Sans TC",sans-seri
     <div class="card">
       <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
         <div style="flex:1;min-width:200px">
-          <div style="font-size:0.85rem;color:var(--muted);margin-bottom:0.5rem">目標客群選擇邏輯</div>
-          <div style="font-size:1rem;line-height:1.8">
+          <div style="font-size:1.08rem;color:var(--muted);margin-bottom:0.5rem">目標客群選擇邏輯</div>
+          <div style="font-size:1.22rem;line-height:1.8">
             大黨候選人 → 穩定性高 → 風險接受度高<br>
             → <span style="color:var(--accent);font-weight:700">更願意嘗試創新技術</span><br>
             + 大黨基本盤 × 精細策略 = <span style="color:var(--green);font-weight:700">最大化勝選機率</span>
           </div>
         </div>
         <div style="width:200px;text-align:center">
-          <div style="font-size:3rem">🎯</div>
-          <div style="font-size:0.9rem;color:var(--accent);font-weight:700">民進黨新人候選人</div>
-          <div style="font-size:0.8rem;color:var(--muted)">最佳切入點</div>
+          <div style="font-size:1.15rem;color:var(--accent);font-weight:700">民進黨新人候選人</div>
+          <div style="font-size:1.05rem;color:var(--muted)">最佳切入點</div>
         </div>
       </div>
     </div>
@@ -243,20 +258,20 @@ body{background:var(--bg);color:var(--text);font-family:"Noto Sans TC",sans-seri
     <div class="grid-2">
       <div class="card">
         <div class="card-title">選區基本資料</div>
-        <div style="font-size:0.9rem;line-height:2">
-          <div>📍 行政區：<strong>中正區 + 萬華區</strong></div>
-          <div>🪑 應選名額：<strong>8 席</strong></div>
-          <div>📊 選民結構：老社區混合型選區</div>
-          <div>🏘️ 社區特色：傳統市場、國宅、藝文區並存</div>
+        <div style="font-size:1.15rem;line-height:2">
+          <div> 行政區：<strong>中正區 + 萬華區</strong></div>
+          <div> 應選名額：<strong>8 席</strong></div>
+          <div> 選民結構：老社區混合型選區</div>
+          <div> 社區特色：傳統市場、國宅、藝文區並存</div>
         </div>
       </div>
       <div class="card">
         <div class="card-title">為何是這個選區？</div>
-        <div style="font-size:0.85rem;color:var(--muted);line-height:1.8">
-          ✅ 兩大黨基本盤穩定但<strong style="color:var(--text)">無絕對優勢</strong><br>
-          ✅ 無黨籍徐立信連兩屆當選，顯示<strong style="color:var(--text)">個人品牌空間大</strong><br>
-          ✅ 吳怡萱 2022 年差距僅 1000+ 票，<strong style="color:var(--text)">翻盤可能性高</strong><br>
-          ✅ 議題多元，AI 系統<strong style="color:var(--text)">能動性强</strong>
+        <div style="font-size:1.08rem;color:var(--muted);line-height:1.8">
+           兩大黨基本盤穩定但<strong style="color:var(--text)">無絕對優勢</strong><br>
+           無黨籍徐立信連兩屆當選，顯示<strong style="color:var(--text)">個人品牌空間大</strong><br>
+           吳怡萱 2022 年差距僅 1000+ 票，<strong style="color:var(--text)">翻盤可能性高</strong><br>
+           議題多元，AI 系統<strong style="color:var(--text)">能動性强</strong>
         </div>
       </div>
     </div>
@@ -264,32 +279,32 @@ body{background:var(--bg);color:var(--text);font-family:"Noto Sans TC",sans-seri
     <div class="section-title" style="margin-top:2rem">政黨選區基本盤分析（同黨得票加總 ÷ 有效票）</div>
     <div class="grid-2">
       <div class="card">
-        <div class="card-title">📅 2022 年選舉</div>
+        <div class="card-title"> 2022 年選舉</div>
         <div class="bar-wrap">
-          <div class="bar-label"><span>🔵 國民黨</span><span style="color:var(--accent)">41%</span></div>
+          <div class="bar-label"><span> 國民黨</span><span style="color:var(--accent)">41%</span></div>
           <div class="bar-bg"><div class="bar-fill bar-kmt" style="width:41%"></div></div>
         </div>
         <div class="bar-wrap">
-          <div class="bar-label"><span>🟢 民進黨</span><span style="color:var(--green)">35%</span></div>
+          <div class="bar-label"><span> 民進黨</span><span style="color:var(--green)">35%</span></div>
           <div class="bar-bg"><div class="bar-fill bar-dpp" style="width:35%"></div></div>
         </div>
         <div class="bar-wrap">
-          <div class="bar-label"><span>⚪ 其他</span><span style="color:var(--yellow)">24%</span></div>
+          <div class="bar-label"><span> 其他</span><span style="color:var(--yellow)">24%</span></div>
           <div class="bar-bg"><div class="bar-fill bar-other" style="width:24%"></div></div>
         </div>
       </div>
       <div class="card">
-        <div class="card-title">📅 2018 年選舉</div>
+        <div class="card-title"> 2018 年選舉</div>
         <div class="bar-wrap">
-          <div class="bar-label"><span>🔵 國民黨</span><span style="color:var(--accent)">42%</span></div>
+          <div class="bar-label"><span> 國民黨</span><span style="color:var(--accent)">42%</span></div>
           <div class="bar-bg"><div class="bar-fill bar-kmt" style="width:42%"></div></div>
         </div>
         <div class="bar-wrap">
-          <div class="bar-label"><span>🟢 民進黨</span><span style="color:var(--green)">35%</span></div>
+          <div class="bar-label"><span> 民進黨</span><span style="color:var(--green)">35%</span></div>
           <div class="bar-bg"><div class="bar-fill bar-dpp" style="width:35%"></div></div>
         </div>
         <div class="bar-wrap">
-          <div class="bar-label"><span>⚪ 其他</span><span style="color:var(--yellow)">23%</span></div>
+          <div class="bar-label"><span> 其他</span><span style="color:var(--yellow)">23%</span></div>
           <div class="bar-bg"><div class="bar-fill bar-other" style="width:23%"></div></div>
         </div>
       </div>
@@ -297,10 +312,9 @@ body{background:var(--bg);color:var(--text);font-family:"Noto Sans TC",sans-seri
 
     <div class="card" style="margin-top:1rem;border-left:4px solid var(--yellow)">
       <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem">
-        <span style="font-size:1.2rem">💡</span>
         <strong>關鍵洞察：穩定基本盤 × 個人操作空間</strong>
       </div>
-      <div style="font-size:0.9rem;color:var(--muted);line-height:1.8">
+      <div style="font-size:1.15rem;color:var(--muted);line-height:1.8">
         兩屆選舉國民黨基本盤約 <strong style="color:var(--text)">41-42%</strong>、民進黨約 <strong style="color:var(--text)">35%</strong>，差距約 6-7 個百分點。
         但無黨籍徐立信兩度當選，證明此選區 <strong style="color:var(--text)">對個人魅力、議題操作、精準策略具有高度回應性</strong>。
         這正是 Frontier Lab 系統最能發揮價值的選區類型。
@@ -309,35 +323,35 @@ body{background:var(--bg);color:var(--text);font-family:"Noto Sans TC",sans-seri
 
     <div class="section-title" style="margin-top:2rem">2022 vs 吳怡萱落選分析</div>
     <div class="card" style="background:rgba(239,68,68,0.05);border-color:rgba(239,68,68,0.2)">
-      <div style="font-size:1rem;line-height:2">
-        🗳️ 吳怡萱得票 vs 末位當選者劉耀仁（14,518票）：差距 <strong style="color:var(--red);font-size:1.3rem">1,150 票</strong>（13,368票落選）<br>
-        📈 吳怡萱：2022 第一落選者，2026 若再戰，將是<strong>民進黨突破第四席與新人當選的重要競爭變數</strong><br>
-        🎯 新人進場的窗口：精準策略 ≠ 資源堆砌
+      <div style="font-size:1.22rem;line-height:2">
+         吳怡萱得票 vs 末位當選者劉耀仁（14,518票）：差距 <strong style="color:var(--red);font-size:1.85rem">1,150 票</strong>（13,368票落選）<br>
+         吳怡萱：2022 第一落選者，2026 若再戰，將是<strong>民進黨突破第四席與新人當選的重要競爭變數</strong><br>
+         新人進場的窗口：精準策略 ≠ 資源堆砌
       </div>
     </div>
 
-    <div class="section-title" style="margin-top:2rem">⚠️ 新變數：應佳妤表態有意以無黨籍參選</div>
+    <div class="section-title" style="margin-top:2rem"> 新變數：應佳妤表態有意以無黨籍參選</div>
     <div class="card" style="border-left:4px solid var(--yellow);background:rgba(245,158,11,0.04)">
       <div style="display:flex;align-items:flex-start;gap:1rem;flex-wrap:wrap">
         <div style="flex:1;min-width:220px">
-          <div style="font-size:0.9rem;font-weight:700;margin-bottom:0.75rem;color:var(--yellow)">🎯 應佳妤的票源結構</div>
-          <div style="font-size:0.85rem;color:var(--muted);line-height:1.9">
+          <div style="font-size:1.15rem;font-weight:700;margin-bottom:0.75rem;color:var(--yellow)"> 應佳妤的票源結構</div>
+          <div style="font-size:1.08rem;color:var(--muted);line-height:1.9">
             <div>• <strong style="color:var(--text)">應曉薇部分支持者</strong>：繼承母親既有票倉，但不一定完全轉移</div>
             <div>• <strong style="color:var(--text)">徐立信支持者</strong>：同為無黨籍路線，有接收空間</div>
             <div>• <strong style="color:var(--text)">吳佳萱支持者</strong>：爭奪非典型選民</div>
           </div>
         </div>
         <div style="flex:1;min-width:220px">
-          <div style="font-size:0.9rem;font-weight:700;margin-bottom:0.75rem;color:var(--accent)">📌 對馬郁雯的戰略意涵</div>
-          <div style="background:rgba(59,130,246,0.08);border-radius:8px;padding:1rem;font-size:0.85rem;line-height:1.9">
-            <div>✅ <strong>應曉薇票倉</strong>：搶不一定搶得贏，切入需溫和</div>
-            <div>✅ <strong>吳佳萱票倉</strong>：雙方均需積極爭取，形成直接競爭</div>
-            <div>✅ <strong style="color:var(--green)">徐立信票倉：操作空間最大</strong>——無黨籍、在地認同、議題導向，透過選民資料庫精準識別後有效切入</div>
+          <div style="font-size:1.15rem;font-weight:700;margin-bottom:0.75rem;color:var(--accent)"> 對馬郁雯的戰略意涵</div>
+          <div style="background:rgba(59,130,246,0.08);border-radius:8px;padding:1rem;font-size:1.08rem;line-height:1.9">
+            <div> <strong>應曉薇票倉</strong>：搶不一定搶得贏，切入需溫和</div>
+            <div> <strong>吳佳萱票倉</strong>：雙方均需積極爭取，形成直接競爭</div>
+            <div> <strong style="color:var(--green)">徐立信票倉：操作空間最大</strong>——無黨籍、在地認同、議題導向，透過選民資料庫精準識別後有效切入</div>
           </div>
         </div>
       </div>
-      <div style="margin-top:1rem;padding-top:1rem;border-top:1px solid var(--border);font-size:0.82rem;color:var(--muted)">
-        💡 <strong style="color:var(--text)">系統應用</strong>：選民資料庫依支持傾向分層（藍、白、綠、無黨籍），智能對話依群體切換論述框架，精準搶攻徐立信選民池
+      <div style="margin-top:1rem;padding-top:1rem;border-top:1px solid var(--border);font-size:1.05rem;color:var(--muted)">
+         <strong style="color:var(--text)">系統應用</strong>：選民資料庫依支持傾向分層（藍、白、綠、無黨籍），智能對話依群體切換論述框架，精準搶攻徐立信選民池
       </div>
     </div>
   </div>
@@ -346,25 +360,20 @@ body{background:var(--bg);color:var(--text);font-family:"Noto Sans TC",sans-seri
 <div class="page" id="page-candidates">
   <div class="container" style="padding-top:2rem">
     <div class="section-title">民進黨初選新人評估</div>
-    <div style="font-size:0.85rem;color:var(--muted);margin-bottom:1.5rem">
+    <div style="font-size:1.08rem;color:var(--muted);margin-bottom:1.5rem">
       現任議員（兩席）已具備穩定支持度，暫時排除。聚焦兩位新人候選人。
     </div>
     <div class="grid-2" style="margin-bottom:2rem">
       <!-- Zhang -->
       <div class="candidate-card">
         <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem">
-          <div style="width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,#1e3a5f,#3b82f6);
-            display:flex;align-items:center;justify-content:center;font-size:1.5rem">👨</div>
+          <img class="candidate-photo" src="zhang.jpg" alt="張銘祐照片">
           <div>
             <div class="candidate-name">張銘祐</div>
             <div class="candidate-sub">正國會系 · 政治幕僚背景</div>
           </div>
         </div>
-        <div style="margin-bottom:0.75rem">
-          <div style="font-size:0.8rem;color:var(--muted);margin-bottom:0.3rem">初選民調支持度</div>
-          <div class="poll-bar"><div class="poll-fill" style="width:14.76%;background:linear-gradient(90deg,#1e3a5f,#3b82f6)"></div></div>
-          <div style="font-size:1.2rem;font-weight:700;color:#3b82f6">14.76%</div>
-        </div>
+        
         <div class="swot-grid" style="margin-top:1rem">
           <div class="swot-item swot-s">
             <div class="swot-label">優勢</div>
@@ -384,7 +393,7 @@ body{background:var(--bg);color:var(--text);font-family:"Noto Sans TC",sans-seri
           </div>
         </div>
         <div class="system-match">
-          <div class="system-match-title">🔧 Frontier Lab 系統建議</div>
+          <div class="system-match-title"> Frontier Lab 系統建議</div>
           <ul>
             <li>選民資料庫識別地方意見領袖</li>
             <li>選舉地圖規劃掃街路線建立能見度</li>
@@ -394,18 +403,13 @@ body{background:var(--bg);color:var(--text);font-family:"Noto Sans TC",sans-seri
       <!-- Ma -->
       <div class="candidate-card selected">
         <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem">
-          <div style="width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,#4c1d95,#8b5cf6);
-            display:flex;align-items:center;justify-content:center;font-size:1.5rem">👩</div>
+          <img class="candidate-photo ma" src="ma.jpg" alt="馬郁雯照片">
           <div>
             <div class="candidate-name">馬郁雯</div>
             <div class="candidate-sub">新潮流系（段宜康）· 政治記者主播</div>
           </div>
         </div>
-        <div style="margin-bottom:0.75rem">
-          <div style="font-size:0.8rem;color:var(--muted);margin-bottom:0.3rem">初選民調支持度</div>
-          <div class="poll-bar"><div class="poll-fill" style="width:22.4%"></div></div>
-          <div style="font-size:1.2rem;font-weight:700;color:var(--accent)">22.40%</div>
-        </div>
+        
         <div class="swot-grid" style="margin-top:1rem">
           <div class="swot-item swot-s">
             <div class="swot-label">優勢</div>
@@ -425,7 +429,7 @@ body{background:var(--bg);color:var(--text);font-family:"Noto Sans TC",sans-seri
           </div>
         </div>
         <div class="system-match">
-          <div class="system-match-title">🔧 Frontier Lab 系統建議</div>
+          <div class="system-match-title"> Frontier Lab 系統建議</div>
           <ul>
             <li>智能對話系統：整合分散網路資訊 → 建立清晰形象</li>
             <li>選舉地圖：跑點路線優化</li>
@@ -436,16 +440,15 @@ body{background:var(--bg);color:var(--text);font-family:"Noto Sans TC",sans-seri
     </div>
 
     <div class="conclusion-box">
-      <h2>✅ 決策：選擇馬郁雯</h2>
-      <div style="font-size:0.95rem;color:var(--muted);max-width:600px;margin:0 auto;line-height:1.8">
+      <h2> 決策：選擇馬郁雯</h2>
+      <div style="font-size:1.18rem;color:var(--muted);max-width:600px;margin:0 auto;line-height:1.8">
         Frontier Lab 在其中的<strong style="color:var(--text)">能動性更强</strong>——
         智能對話系統可系統性整合她分散的媒體資歷，
         是新人參選中最能彰顯系統價值的目標。
       </div>
       <div class="conclusion-steps">
-        <div class="step-box"><div class="step-num">22%</div>初選民調領先</div>
         <div class="step-box"><div class="step-num">AI</div>形象系統化</div>
-        <div class="step-box"><div class="step-num">🗺️</div>地面戰補強</div>
+        <div class="step-box"><div class="step-num">補強</div>地面戰</div>
         <div class="step-box"><div class="step-num">高</div>系統能動性</div>
       </div>
     </div>
@@ -455,57 +458,60 @@ body{background:var(--bg);color:var(--text);font-family:"Noto Sans TC",sans-seri
 <div class="page" id="page-issues">
   <div class="container" style="padding-top:2rem">
     <div class="section-title">重要議題 × 系統切入點</div>
-    <div style="font-size:0.85rem;color:var(--muted);margin-bottom:1.5rem">
-      點擊各議題查看詳情與 Frontier Lab 應用場景
+    <div style="font-size:1.08rem;color:var(--muted);margin-bottom:1.5rem">
+      點擊各議題查看詳情與 Frontier Lab 應用場景。
     </div>
 
-    <div class="issue-card" id="issue1" onclick="toggleIssue('issue1')" style="border-left-color:#ef4444">
+    <div class="issue-card presentation" id="issue1" onclick="toggleIssue('issue1')" style="border-left-color:#fca5a5">
       <div class="issue-title">
-        <span style="font-size:1.3rem">🏗️</span>
         <strong>京華城案 × 應曉薇</strong>
         <span class="tag tag-red">敏感議題</span>
         <span class="tag tag-yellow">需謹慎操作</span>
+        <span class="tag tag-purple">適合展現差異化溝通能力</span>
       </div>
       <div class="issue-body">
-        應曉薇在本選區具一定支持度，馬郁雯曾追蹤報導京華城案。
+        應曉薇在本選區具一定支持度，馬郁雯曾追蹤報導京華城案；此議題的核心不是強攻，而是依選民立場調整語氣與證據呈現。
       </div>
-      <div class="system-match" id="detail1" style="display:none;margin-top:1rem">
-        <div class="system-match-title">📌 操作策略</div>
-        <div style="font-size:0.85rem;color:var(--text);line-height:1.8">
-          ⚠️ 切入點需謹慎：<br>
-          • <strong>打偏藍、白支持者</strong>→ 策略應溫和，不可激化<br>
-          • <strong>穩固綠營支持者</strong>→ 強調記者追查公正立場<br>
-          • <strong>智能對話系統</strong>：依選民傾向切換回應語氣與論述框架<br>
-          • <strong>選民資料庫</strong>：識別各陣營支持者，差異化溝通
+      <div class="system-match" id="detail1" style="display:none">
+        <div class="system-match-title">Frontier Lab 核心應用場景</div>
+        <div style="font-size:1.15rem;color:var(--text);line-height:1.8">
+          <strong>智能對話與選民傾向分層</strong>：把同一議題轉換成不同族群可接受的說法。
+          <div class="issue-detail-grid">
+            <div class="issue-detail-cell issue-detail-blue"><strong style="color:var(--accent)">偏藍選民</strong>策略：避免激化對立，以公共利益、監督標準與制度透明為主軸。</div>
+            <div class="issue-detail-cell issue-detail-yellow"><strong style="color:var(--yellow)">白營 / 中間選民</strong>策略：聚焦事實、程序正義與財政責任，降低政黨攻防感。</div>
+            <div class="issue-detail-cell issue-detail-green"><strong style="color:var(--green)">綠營支持者</strong>策略：強調追查能力、公正立場與記者背景的可信度。</div>
+            <div class="issue-detail-cell issue-detail-purple"><strong style="color:var(--accent2)">系統任務</strong>智能對話切換語氣；選民資料庫標記立場；案件管理追蹤輿情回應。</div>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="issue-card" id="issue2" onclick="toggleIssue('issue2')" style="border-left-color:#10b981">
+    <div class="issue-card presentation" id="issue2" onclick="toggleIssue('issue2')" style="border-left-color:#86efac">
       <div class="issue-title">
-        <span style="font-size:1.3rem">🌿</span>
-        <strong>錳鉀公園改建 × 無家者議題</strong>
+        <strong>艋舺公園改建 × 無家者議題</strong>
         <span class="tag tag-green">無關黨派</span>
         <span class="tag tag-blue">在地認同</span>
+        <span class="tag tag-purple">適合建立長期服務感</span>
       </div>
       <div class="issue-body">
-        無關黨派的在地議題，記者追蹤新聞經驗的延伸應用。
+        這是安全且具地方溫度的跨黨派議題，可把記者追蹤新聞的經驗，轉化為追蹤地方長期問題與服務執行力。
       </div>
-      <div class="system-match" id="detail2" style="display:none;margin-top:1rem">
-        <div class="system-match-title">📌 操作策略</div>
-        <div style="font-size:0.85rem;color:var(--text);line-height:1.8">
-          ✅ 最安全的跨黨派議題切入點：<br>
-          • 記者追蹤新聞經驗 → 轉化為追蹤<strong>地方長期議題的能力</strong><br>
-          • <strong>案件管理系統</strong>：追蹤改建進度、記錄無家者服務<br>
-          • <strong>選舉地圖</strong>：標記公園周邊居民分布，規劃走訪路線<br>
-          • <strong>智能對話</strong>：建立關懷議題的候選人形象
+      <div class="system-match" id="detail2" style="display:none">
+        <div class="system-match-title">Frontier Lab 核心應用場景</div>
+        <div style="font-size:1.15rem;color:var(--text);line-height:1.8">
+          <strong>案件管理 × 地圖化服務追蹤</strong>：把公園周邊居民、商家與服務單位的需求整理成可持續追蹤的地方工作流。
+          <div class="issue-detail-grid">
+            <div class="issue-detail-cell issue-detail-blue"><strong style="color:var(--accent)">周邊居民</strong>策略：生活安全、環境品質、日常使用感受。</div>
+            <div class="issue-detail-cell issue-detail-yellow"><strong style="color:var(--yellow)">商家 / 市場</strong>策略：人流、營業環境、夜間秩序與商圈信任。</div>
+            <div class="issue-detail-cell issue-detail-green"><strong style="color:var(--green)">社福單位</strong>策略：服務銜接、安置資源、避免標籤化。</div>
+            <div class="issue-detail-cell issue-detail-purple"><strong style="color:var(--accent2)">系統任務</strong>案件管理記錄進度；選舉地圖標記熱點；智能對話建立關懷形象。</div>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="issue-card" id="issue3" onclick="toggleIssue('issue3')" style="border-left-color:#f59e0b">
+    <div class="issue-card presentation" id="issue3" onclick="toggleIssue('issue3')" style="border-left-color:#fde68a">
       <div class="issue-title">
-        <span style="font-size:1.3rem">🏢</span>
         <strong>西寧國宅改建 × 攤商協商</strong>
         <span class="tag tag-yellow">利害關係人複雜</span>
         <span class="tag tag-purple">最適合展現 Frontier 利害關係人分層與案件追蹤能力</span>
@@ -513,27 +519,15 @@ body{background:var(--bg);color:var(--text);font-family:"Noto Sans TC",sans-seri
       <div class="issue-body">
         西寧市場攤商對新攤位規劃不滿，多方利害關係人、資訊分散、感受差異大。
       </div>
-      <div class="system-match" id="detail3" style="display:none;margin-top:1rem">
-        <div class="system-match-title">📌 Frontier Lab 核心應用場景</div>
-        <div style="font-size:0.85rem;color:var(--text);line-height:1.8">
-          🎯 <strong>選民資料庫分層管理</strong>（系統最佳展示場景）：<br>
-          <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:0.5rem;margin-top:0.75rem">
-            <div style="background:rgba(59,130,246,0.1);border-radius:8px;padding:0.75rem;font-size:0.8rem">
-              <div style="color:var(--accent);font-weight:700;margin-bottom:0.3rem">👨‍💼 政府/建商</div>
-              策略：正式溝通、政策語言、法規框架
-            </div>
-            <div style="background:rgba(245,158,11,0.1);border-radius:8px;padding:0.75rem;font-size:0.8rem">
-              <div style="color:var(--yellow);font-weight:700;margin-bottom:0.3rem">🛒 攤商</div>
-              策略：同理心優先、具體訴求、協商記錄
-            </div>
-            <div style="background:rgba(139,92,246,0.1);border-radius:8px;padding:0.75rem;font-size:0.8rem">
-              <div style="color:#a78bfa;font-weight:700;margin-bottom:0.3rem">🏘️ 居民</div>
-              策略：生活影響、社區情感、未來願景
-            </div>
-            <div style="background:rgba(16,185,129,0.1);border-radius:8px;padding:0.75rem;font-size:0.8rem">
-              <div style="color:var(--green);font-weight:700;margin-bottom:0.3rem">🎓 青年</div>
-              策略：都市更新、公共空間、永續發展
-            </div>
+      <div class="system-match" id="detail3" style="display:none">
+        <div class="system-match-title">Frontier Lab 核心應用場景</div>
+        <div style="font-size:1.15rem;color:var(--text);line-height:1.8">
+          <strong>選民資料庫分層管理（系統最佳展示場景）</strong>：
+          <div class="issue-detail-grid">
+            <div class="issue-detail-cell issue-detail-blue"><strong style="color:var(--accent)">政府 / 建商</strong>策略：正式溝通、政策語言、法規框架。</div>
+            <div class="issue-detail-cell issue-detail-yellow"><strong style="color:var(--yellow)">攤商</strong>策略：同理心優先、具體訴求、協商記錄。</div>
+            <div class="issue-detail-cell issue-detail-purple"><strong style="color:var(--accent2)">居民</strong>策略：生活影響、社區情感、未來願景。</div>
+            <div class="issue-detail-cell issue-detail-green"><strong style="color:var(--green)">青年</strong>策略：都市更新、公共空間、永續發展。</div>
           </div>
         </div>
       </div>
@@ -547,16 +541,16 @@ body{background:var(--bg);color:var(--text);font-family:"Noto Sans TC",sans-seri
 
     <div class="grid-2" style="margin-bottom:1.5rem">
       <div class="card" style="border-top:3px solid var(--accent2)">
-        <div class="card-title">🎯 核心痛點診斷</div>
-        <div style="font-size:0.9rem;line-height:1.9">
-          <div>❶ 新人知名度不足 → <span class="tag tag-purple">智能對話系統</span></div>
-          <div>❷ 過去經歷分散難整合 → <span class="tag tag-blue">AI 形象架構</span></div>
-          <div>❸ 地面戰經驗薄弱 → <span class="tag tag-green">選舉地圖 + 路線規劃</span></div>
-          <div>❹ 多元選民溝通複雜 → <span class="tag tag-yellow">選民資料庫分層</span></div>
+        <div class="card-title"> 核心痛點診斷</div>
+        <div style="font-size:1.15rem;line-height:1.9">
+          <div> 新人知名度不足 → <span class="tag tag-purple">智能對話系統</span></div>
+          <div> 過去經歷分散難整合 → <span class="tag tag-blue">AI 形象架構</span></div>
+          <div> 地面戰經驗薄弱 → <span class="tag tag-green">選舉地圖 + 路線規劃</span></div>
+          <div> 多元選民溝通複雜 → <span class="tag tag-yellow">選民資料庫分層</span></div>
         </div>
       </div>
       <div class="card" style="border-top:3px solid var(--green)">
-        <div class="card-title">📈 勝選關鍵路徑</div>
+        <div class="card-title"> 勝選關鍵路徑</div>
         <div class="timeline" style="margin-top:0.5rem">
           <div class="timeline-item">
             <div class="timeline-dot" style="background:var(--accent2)"></div>
@@ -584,36 +578,36 @@ body{background:var(--bg);color:var(--text);font-family:"Noto Sans TC",sans-seri
 
     <div class="section-title">具體應用情境假設</div>
     <div class="card" style="background:linear-gradient(135deg,rgba(139,92,246,0.05),rgba(59,130,246,0.05));border-color:rgba(139,92,246,0.2)">
-      <div style="font-size:1rem;font-weight:700;margin-bottom:1rem;color:var(--accent2)">
-        📱 情境：西寧國宅攤商陳情事件
+      <div style="font-size:1.22rem;font-weight:700;margin-bottom:1rem;color:var(--accent2)">
+         情境：西寧國宅攤商陳情事件
       </div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem">
         <div style="text-align:center;padding:1rem;background:var(--surface);border-radius:10px">
-          <div style="font-size:2rem;margin-bottom:0.5rem">👥</div>
-          <div style="font-size:0.85rem;font-weight:700;margin-bottom:0.3rem">Step 1</div>
-          <div style="font-size:0.8rem;color:var(--muted)">選民資料庫識別攤商、居民、青年三類族群</div>
+          
+          <div style="font-size:1.08rem;font-weight:700;margin-bottom:0.3rem">Step 1</div>
+          <div style="font-size:1.05rem;color:var(--muted)">選民資料庫識別攤商、居民、青年三類族群</div>
         </div>
         <div style="text-align:center;padding:1rem;background:var(--surface);border-radius:10px">
-          <div style="font-size:2rem;margin-bottom:0.5rem">🗺️</div>
-          <div style="font-size:0.85rem;font-weight:700;margin-bottom:0.3rem">Step 2</div>
-          <div style="font-size:0.8rem;color:var(--muted)">選舉地圖標記各族群分布，規劃拜訪路線</div>
+          
+          <div style="font-size:1.08rem;font-weight:700;margin-bottom:0.3rem">Step 2</div>
+          <div style="font-size:1.05rem;color:var(--muted)">選舉地圖標記各族群分布，規劃拜訪路線</div>
         </div>
         <div style="text-align:center;padding:1rem;background:var(--surface);border-radius:10px">
-          <div style="font-size:2rem;margin-bottom:0.5rem">💬</div>
-          <div style="font-size:0.85rem;font-weight:700;margin-bottom:0.3rem">Step 3</div>
-          <div style="font-size:0.8rem;color:var(--muted)">智能對話切換策略：攤商版 / 居民版 / 青年版</div>
+          
+          <div style="font-size:1.08rem;font-weight:700;margin-bottom:0.3rem">Step 3</div>
+          <div style="font-size:1.05rem;color:var(--muted)">智能對話切換策略：攤商版 / 居民版 / 青年版</div>
         </div>
         <div style="text-align:center;padding:1rem;background:var(--surface);border-radius:10px">
-          <div style="font-size:2rem;margin-bottom:0.5rem">📋</div>
-          <div style="font-size:0.85rem;font-weight:700;margin-bottom:0.3rem">Step 4</div>
-          <div style="font-size:0.8rem;color:var(--muted)">案件管理追蹤協商進度，展現候選人執行力</div>
+          
+          <div style="font-size:1.08rem;font-weight:700;margin-bottom:0.3rem">Step 4</div>
+          <div style="font-size:1.05rem;color:var(--muted)">案件管理追蹤協商進度，展現候選人執行力</div>
         </div>
       </div>
     </div>
 
     <div class="conclusion-box" style="margin-top:1.5rem">
-      <h2>🚀 選戰顧問建議</h2>
-      <div style="font-size:1rem;color:var(--text);max-width:760px;margin:1rem auto;line-height:2;text-align:left">
+      <h2> 選戰顧問建議</h2>
+      <div style="font-size:1.22rem;color:var(--text);max-width:760px;margin:1rem auto;line-height:2;text-align:left">
         馬郁雯的勝選關鍵<strong style="color:var(--accent)">不是擴大聲量，而是讓聲量地方化</strong>。<br>
         <span style="display:inline-block;margin-top:0.5rem">
           <strong style="color:var(--green)">第一步</strong>
@@ -631,7 +625,7 @@ body{background:var(--bg);color:var(--text);font-family:"Noto Sans TC",sans-seri
       </div>
       <div class="conclusion-steps">
         <div class="step-box"><div class="step-num">💬</div>智能對話</div>
-        <div class="step-box"><div class="step-num">👥</div>選民資料庫</div>
+        <div class="step-box"><div class="step-num">🗂️</div>選民資料庫</div>
         <div class="step-box"><div class="step-num">🗺️</div>選舉地圖</div>
         <div class="step-box"><div class="step-num">📍</div>路線規劃</div>
         <div class="step-box"><div class="step-num">📊</div>分區戰情</div>
